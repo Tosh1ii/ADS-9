@@ -3,9 +3,10 @@
 #include  <fstream>
 #include  <locale>
 #include  <cstdlib>
-#include  "tree.h"
 #include <algorithm>
 #include <vector>
+#include  "tree.h"
+
 
 PMTree::PMTree(const std::vector<char>& elements) {
     std::vector<char> sorted = elements;
