@@ -62,7 +62,7 @@ std::vector<std::vector<char>> PMTree::getAllPerms() const {
     return perms;
 }
 
-void PMTree::collectPerms(Node* node, std::vector<char>& current, 
+void PMTree::collectPerms(Node* node, std::vector<char>& current,
                           std::vector<std::vector<char>>& perms) const {
     current.push_back(node->symbol);
     if (node->children.empty()) {
