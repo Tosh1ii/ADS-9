@@ -7,7 +7,7 @@
 
 class PMTree {
  public:
-    PMTree(const std::vector<char>& elements);
+    explicit PMTree(const std::vector<char>& elements);
     ~PMTree();
     std::vector<std::vector<char>> getAllPerms() const;
     std::vector<char> getPermByNumber(int num) const;
@@ -17,7 +17,7 @@ class PMTree {
     struct Node {
         char symbol;
         std::vector<Node*> children;
-        Node(char ch) : symbol(ch) {}
+        explicit Node(char ch) : symbol(ch) {}
     };
 
     Node* root;
@@ -25,7 +25,7 @@ class PMTree {
     std::vector<int> factorials;
 
     void buildTree(Node* node, const std::vector<char>& elements);
-    void collectPerms(Node* node, std::vector<char>& current,\
+    void collectPerms(Node* node, std::vector<char>& current,\ 
 std::vector<std::vector<char>>& perms) const;
     void clearTree(Node* node);
     void precomputeFactorials();
