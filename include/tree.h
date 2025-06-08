@@ -6,15 +6,14 @@
 #include <string>
 
 class PMTree {
-
-public: 
+ public:
     PMTree(const std::vector<char>& elements);
     ~PMTree();
     std::vector<std::vector<char>> getAllPerms() const;
     std::vector<char> getPermByNumber(int num) const;
     int totalPermutations() const;
 
-private: 
+ private:
     struct Node {
         char symbol;
         std::vector<Node*> children;
@@ -26,7 +25,8 @@ private:
     std::vector<int> factorials;
 
     void buildTree(Node* node, const std::vector<char>& elements);
-    void collectPerms(Node* node, std::vector<char>& current, std::vector<std::vector<char>>& perms) const;
+    void collectPerms(Node* node, std::vector<char>& current,\
+std::vector<std::vector<char>>& perms) const;
     void clearTree(Node* node);
     void precomputeFactorials();
 };
