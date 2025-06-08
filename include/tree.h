@@ -6,14 +6,15 @@
 #include <string>
 
 class PMTree {
-public:
+
+public: 
     PMTree(const std::vector<char>& elements);
     ~PMTree();
     std::vector<std::vector<char>> getAllPerms() const;
     std::vector<char> getPermByNumber(int num) const;
     int totalPermutations() const;
 
-private:
+private: 
     struct Node {
         char symbol;
         std::vector<Node*> children;
