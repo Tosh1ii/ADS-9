@@ -25,7 +25,7 @@ class PMTree {
     std::vector<int> factorials;
 
     void buildTree(Node* node, const std::vector<char>& elements);
-    void collectPerms(Node* node, std::vector<char>& current,\ 
+    void collectPerms(Node* node, std::vector<char>& current, \
 std::vector<std::vector<char>>& perms) const;
     void clearTree(Node* node);
     void precomputeFactorials();
